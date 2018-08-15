@@ -5,9 +5,12 @@ import java.util.List;
 import com.etc.entity.Myorder;
 
 public interface MyorderService {
+	
 	public boolean addtomyorder(Date orderdate,String orderstate,String goodsname,double ordertotalprice,
             int goodscount,String username,int ordernum,double goodsprice);
+	
 	public List<Myorder> selectbyname(String username);
-	//根据ordernum修改order
+	
+	// 根据ordernum修改order
 	public boolean updateoroder(int ordernum);
 }

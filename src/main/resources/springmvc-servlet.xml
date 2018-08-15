@@ -24,7 +24,8 @@
 		class="org.springframework.web.servlet.view.UrlBasedViewResolver">
 		<!-- 注入 支持jstl -->
 		<property name="viewClass"
-			value="org.springframework.web.servlet.view.JstlView"></property>
+			value="org.springframework.web.servlet.view.JstlView">
+		</property>
 		<!-- 前缀 -->
 		<property name="prefix" value="/WEB-INF/jsp/"></property>
 		<!-- 后缀 -->
@@ -32,13 +33,13 @@
 	</bean>
 
 	<!-- 文件上传的配置信息 -->
-	<bean id="multipartResolver"
-		class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+	<bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
 		<property name="maxUploadSize" value="99999999"></property>
 		<property name="maxInMemorySize" value="4096"></property>
 	</bean>
 
 	<!-- 输出excel pdf等其他视图配置 -->
 	<bean class="org.springframework.web.servlet.view.BeanNameViewResolver"></bean>
+
 	
 </beans>

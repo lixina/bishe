@@ -11,17 +11,20 @@
 	</select>
 	
     <!-- 根据类型查询商品 -->
-     <select id="getGoodsByType" resultMap="GoodsmsgMap">
+    <select id="getGoodsByType" resultMap="GoodsmsgMap">
         select * from goodsmsg where goodstype = #{goodstype}
-     </select>
-     <!-- 根据商品名称模糊查询 -->
-     <select id="getgoodsbyname" resultMap="GoodsmsgMap">
+    </select>
+    
+    <!-- 根据商品名称模糊查询 -->
+    <select id="getgoodsbyname" resultMap="GoodsmsgMap">
         select * from goodsmsg where goodsname like '%${goodsname}%'
-     </select>
-     <!-- 根据goodsid查询商品信息（商品显示页） -->
-     <select id="getGoodsById" resultMap="GoodsmsgMap">
+    </select>
+    
+    <!-- 根据goodsid查询商品信息（商品显示页） -->
+    <select id="getGoodsById" resultMap="GoodsmsgMap">
         select * from goodsmsg where id =#{goodsid}
-     </select>
+    </select>
+    
 	<!-- 自定义一个结果的映射 -->
 	<resultMap type="com.etc.entity.Goodsmsg" id="GoodsmsgMap">
 		<!-- 指定主属性 -->

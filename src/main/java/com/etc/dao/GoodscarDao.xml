@@ -7,29 +7,35 @@
 	<!-- 再解释 select id 就是接口中的方法名 使用了自定义的resultMap,此时resultType属性就要删除咯 -->
 	<!-- 插入购物车信息 -->
 	<insert id="addtogoodscar" >
-	  insert into goodscar(goodsid,username,goodsname,totalprice,goodsprice )
-	  values(#{goodsid},#{username},#{goodsname},#{totalprice},#{goodsprice})
+	    insert into goodscar(goodsid,username,goodsname,totalprice,goodsprice )
+	    values(#{goodsid},#{username},#{goodsname},#{totalprice},#{goodsprice})
 	</insert>
+	
 	<select id="isexits" >
-	select count(1) from goodscar where goodsid=#{goodsid} and username=#{username}
+		select count(1) from goodscar where goodsid=#{goodsid} and username=#{username}
 	</select>
+	
 	<!-- 查找购物车信息 -->
 	<select id="showgoodscar" resultMap="GoodscarMap" >
 	   select * from goodscar where username = #{username}
 	</select>
+	
 	<!-- 根据goodscarid删除 -->
 	<delete id="delgoodscar" parameterType="int">
-	delete from goodscar where goodscarid = #{goodscarid}
+		delete from goodscar where goodscarid = #{goodscarid}
 	</delete>
-    <!-- 	根据goodscarid修改goodscount -->
+	
+    <!-- 根据goodscarid修改goodscount -->
     <update id="updategoodscar" parameterType="int">
-    update goodscar 
-    set goodscount = #{goodscount}
-    where goodscarid = #{goodscarid}
+	    update goodscar 
+	    set goodscount = #{goodscount}
+	    where goodscarid = #{goodscarid}
     </update>
+    
     <select id="selectgoodscar" resultMap="GoodscarMap">
-    select * from goodscar where goodscarid = #{goodscarid}
+    	select * from goodscar where goodscarid = #{goodscarid}
     </select>
+    
 	<resultMap type="com.etc.entity.Goodscar" id="GoodscarMap">
 		<!-- 指定主属性 -->
 		<id property="goodscarid" column="goodscarid" />

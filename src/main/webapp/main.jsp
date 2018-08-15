@@ -1,5 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=utf-8"
-    pageEncoding="utf-8"%>
+<%@ page language="java" contentType="text/html; charset=utf-8" pageEncoding="utf-8"%>
 <!DOCTYPE html>
 <html>
 	<head>
@@ -11,6 +10,9 @@
 		 <!-- 新 Bootstrap 核心 CSS 文件 -->
 <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
 <link rel="stylesheet" type="text/css" media="screen" href="https://cdn.bootcss.com/ionicons/2.0.1/css/ionicons.min.css">
+<!-- 修改tab图标 -->
+<!-- <link rel="shortcut icon" href="http://i1.social.s-msft.com/Forums/GlobalResources/images/Msdn/favicon.ico" type="image/x-icon" /> -->
+<link rel="shortcut icon" href="img/bitbug_favicon.ico" type="image/x-icon" />
 <!-- 可选的Bootstrap主题文件（一般不使用） -->
 <script src="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"></script>
  

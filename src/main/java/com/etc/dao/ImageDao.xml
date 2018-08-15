@@ -3,22 +3,23 @@
   PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.etc.dao.ImageDao">
-<select id="getImage" resultMap="ImageMap">
-select * from image where goodsid = #{goodsid} and imagetype = #{imagetype}
-</select>
-
-<select id="getSomeImage" resultMap="ImageMap">
-select * from image where goodsid = #{goodsid} and imagetype = #{imagetype}
-</select>
-
-<select id="getAllImage" resultMap="ImageMap">
-select * from image where goodsid = #{goodsid}
-</select>
-<resultMap type="com.etc.entity.Image" id="ImageMap">
-		<!-- 指定主属性 -->
-		<id property="id" column="id" />
-		<!-- 其他属性 -->
-		<!-- <result property="blogTitle" column="title" />
-		<result property="blogContent" column="content" /> -->
+	<select id="getImage" resultMap="ImageMap">
+		select * from image where goodsid = #{goodsid} and imagetype = #{imagetype}
+	</select>
+	
+	<select id="getSomeImage" resultMap="ImageMap">
+		select * from image where goodsid = #{goodsid} and imagetype = #{imagetype}
+	</select>
+	
+	<select id="getAllImage" resultMap="ImageMap">
+		select * from image where goodsid = #{goodsid}
+	</select>
+	
+	<resultMap type="com.etc.entity.Image" id="ImageMap">
+			<!-- 指定主属性 -->
+			<id property="id" column="id" />
+			<!-- 其他属性 -->
+			<!-- <result property="blogTitle" column="title" />
+			<result property="blogContent" column="content" /> -->
 	</resultMap>
 </mapper>

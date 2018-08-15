@@ -3,27 +3,30 @@
   PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.etc.dao.UsermsgDao">
-<select id="isMatchee" resultType="boolean">
-select count(1) from users where username = #{username}
-</select>
-<insert id="adduser" parameterType="String">
-insert into users(username,userphone,userpwd,useraddress) values(#{username},#{userphone},#{userpwd},#{useraddress})
-</insert>
-<select id="isuser" resultType="boolean">
-select count(1) from users where username = #{username} and userpwd = #{userpwd}
-</select>
-<select id="selectuserbyname" resultMap="UsermsgMap">
-select * from users where username = #{username}
-</select>
-<!-- 根据username修改用户电话和地址 -->
-<update id="updateuser" parameterType="String">
-update users set userphone = #{userphone},useraddress = #{useraddress} where username=#{username}
-</update>
-<resultMap type="com.etc.entity.Usermsg" id="UsermsgMap">
+
+	<select id="isMatchee" resultType="boolean">
+		select count(1) from users where username = #{username}
+	</select>
+	
+	<insert id="adduser" parameterType="String">
+		insert into users(username,userphone,userpwd,useraddress) values(#{username},#{userphone},#{userpwd},#{useraddress})
+	</insert>
+	
+	<select id="isuser" resultType="boolean">
+		select count(1) from users where username = #{username} and userpwd = #{userpwd}
+	</select>
+	
+	<select id="selectuserbyname" resultMap="UsermsgMap">
+		select * from users where username = #{username}
+	</select>
+	
+	<!-- 根据username修改用户电话和地址 -->
+	<update id="updateuser" parameterType="String">
+		update users set userphone = #{userphone},useraddress = #{useraddress} where username=#{username}
+	</update>
+	
+	<resultMap type="com.etc.entity.Usermsg" id="UsermsgMap">
 		<!-- 指定主属性 -->
 		<id property="userid" column="userid" />
-		<!-- 其他属性 -->
-		<!-- <result property="blogTitle" column="title" />
-		<result property="blogContent" column="content" /> -->
-</resultMap>
+	</resultMap>
 </mapper>

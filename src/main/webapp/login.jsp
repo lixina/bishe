@@ -115,6 +115,7 @@ $(function(){
 			<h2><strong>登录</strong></h2><br />
 			<h4>使用现有用户</h4><br />
 			<h3><strong>请填写您的用户名及密码</strong></h3><br />
+			<!-- <form action="/login" method="post"> -->
 			<form action="/login" method="post">
 			<strong>用户名*</strong><input type="text" name="username" value="${usermsg.username}" style="border:groove;border-color: darkgray;"/><br /><br /><br />
 			&nbsp;&nbsp;&nbsp;&nbsp;<strong>密码*</strong><input type="password" name="userpwd" value="${usermsg.userpwd}" style="border:groove;border-color: darkgray;"/><br /><br /><br />
@@ -132,7 +133,7 @@ $(function(){
 	</div>
 		<br /><br />	 
 	   
-	   <div class="row clearfix"style="margin-left: 0px;">
+	   <div class="row clearfix"style="margin-left: 180px;">
 				<div class="column" style="display: inline-block;margin-left: 100px;">
 					<img alt="140x140" src="img/gentics-content8.jpg" />
 				</div>

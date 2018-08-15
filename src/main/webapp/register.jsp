@@ -180,7 +180,7 @@ $("#userphone").blur(function(){
 	</div>
 		<br /><br />	 
 	   
-	   <div class="row clearfix"style="margin-left: 0px;">
+	   <div class="row clearfix"style="margin-left: 180px;">
 				<div class="column" style="display: inline-block;margin-left: 100px;">
 					<img alt="140x140" src="img/gentics-content8.jpg" />
 				</div>

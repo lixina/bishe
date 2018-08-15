@@ -3,22 +3,23 @@
   PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.etc.dao.MyorderDao">
-<insert id="addtomyorder" >
-insert into myorder( orderdate,orderstate,goodsname,ordertotalprice,goodscount,username,ordernum,goodsprice)
-values( #{orderdate},#{orderstate},#{goodsname},#{ordertotalprice},#{goodscount},#{username},#{ordernum},#{goodsprice})
-</insert>
-<select id="selectbyname" resultMap="MyorderMap">
-select * from myorder where  username = #{username} 
-</select>
-<!-- 根据ordernum修改order -->
-<update id="updateoroder">
-update myorder set orderstate = "已收货" where ordernum = #{ordernum}
-</update>
-<resultMap type="com.etc.entity.Myorder" id="MyorderMap">
+
+	<insert id="addtomyorder" >
+		insert into myorder( orderdate,orderstate,goodsname,ordertotalprice,goodscount,username,ordernum,goodsprice)
+		values( #{orderdate},#{orderstate},#{goodsname},#{ordertotalprice},#{goodscount},#{username},#{ordernum},#{goodsprice})
+	</insert>
+	
+	<select id="selectbyname" resultMap="MyorderMap">
+	    select * from myorder where  username = #{username} 
+	</select>
+	
+	<!-- 根据ordernum修改order -->
+	<update id="updateoroder">
+	    update myorder set orderstate = "已收货" where ordernum = #{ordernum}
+	</update>
+	
+	<resultMap type="com.etc.entity.Myorder" id="MyorderMap">
 		<!-- 指定主属性 -->
 		<id property="id" column="id" />
-		<!-- 其他属性 -->
-		<!-- <result property="blogTitle" column="title" />
-		<result property="blogContent" column="content" /> -->
 	</resultMap>
 </mapper>

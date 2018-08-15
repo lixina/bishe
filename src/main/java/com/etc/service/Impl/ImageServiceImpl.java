@@ -13,16 +13,19 @@ import com.etc.service.ImageService;
 public class ImageServiceImpl implements ImageService{
     @Resource
 	private ImageDao imgd;
+    
     public Image getImage(int goodsid,int imagetype){
-    	//查询商品小图片
+    	// 查询商品小图片
     	return imgd.getImage(goodsid,imagetype);
     }
+    
     public List<Image> getSomeImage(int goodsid, int imagetype) {
-    	//购买详情页获取图片
+    	// 购买详情页获取图片
     	return imgd.getSomeImage(goodsid, imagetype);
     }
+    
     public List<Image> getAllImage(int goodsid) {
-    	//购买详情页获取图片
+    	// 购买详情页获取图片
     	return imgd.getAllImage(goodsid);
     }
 }

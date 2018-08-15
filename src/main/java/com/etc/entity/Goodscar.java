@@ -65,7 +65,6 @@ public void setGoodsprice(double goodsprice) {
 	this.goodsprice = goodsprice;
 }
 public Goodscar() {
-	// TODO Auto-generated constructor stub
 }
 @Override
 public String toString() {

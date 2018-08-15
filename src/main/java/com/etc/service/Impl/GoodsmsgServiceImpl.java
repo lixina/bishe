@@ -19,14 +19,16 @@ public class GoodsmsgServiceImpl implements GoodsmsgService{
     private GoodsmsgDao gd;
 	@Resource
 	private ImageDao imgd;
+	
 	public List<Goodsmsg> getAllGoodsmsg() {
 		// 获取所有商品信息
 		return gd.getAllGoodsmsg();
 	}
+	
 	public List<Goodsmsg> getGoodsByType(String goodstype) {
 		// 根据商品类型获取商品信息
-		List<Goodsmsg> list = gd.getGoodsByType(goodstype);//没有图片
-		List listmsg = new ArrayList();
+		List<Goodsmsg> list = gd.getGoodsByType(goodstype);// 没有图片
+		List<Goodsmsg> listmsg = new ArrayList<Goodsmsg>();
 		for(Goodsmsg goodsmsg:list){
 			Goodsmsg goods = goodsmsg;
 			int id = goods.getId();
@@ -37,10 +39,11 @@ public class GoodsmsgServiceImpl implements GoodsmsgService{
 		}
 		return listmsg;
 	}
+	
 	public List<Goodsmsg> getgoodsbyname(String goodsname) {
 		// 根据商品名称模糊查询
 		List<Goodsmsg> list = gd.getgoodsbyname(goodsname);
-		List listmsg = new ArrayList();
+		List<Goodsmsg> listmsg = new ArrayList<Goodsmsg>();
 		for(Goodsmsg goodsmsg:list){
 			Goodsmsg goods = goodsmsg;
 			int id = goods.getId();
@@ -51,6 +54,7 @@ public class GoodsmsgServiceImpl implements GoodsmsgService{
 		}
 		return listmsg;
 	}
+	
 	public Goodsmsg getgoodsbyid(int goodsid) {
 		// 根据goodsid查询商品信息（商品显示页）
 		return gd.getGoodsById(goodsid);

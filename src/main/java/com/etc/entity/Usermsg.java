@@ -45,4 +45,14 @@ public String toString() {
   public Usermsg() {
 	// TODO Auto-generated constructor stub
 }
+public Usermsg(int userid, String username, String userpwd, String userphone,
+		String useraddress) {
+	super();
+	this.userid = userid;
+	this.username = username;
+	this.userpwd = userpwd;
+	this.userphone = userphone;
+	this.useraddress = useraddress;
+}
+  
 }

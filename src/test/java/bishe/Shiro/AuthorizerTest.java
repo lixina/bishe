@@ -15,17 +15,17 @@ public class AuthorizerTest {
 	}
 	@Test
 	public void testAuthentication() {
-		//1.构建SecurityManager环境
-	DefaultSecurityManager defaultSecurityManager = new DefaultSecurityManager();
-	defaultSecurityManager.setRealm(simpleAccountRealm);
-		//主体提交认证请求
-	SecurityUtils.setSecurityManager(defaultSecurityManager);
-	org.apache.shiro.subject.Subject subject = SecurityUtils.getSubject();
-	UsernamePasswordToken token = new UsernamePasswordToken("lixin","123456");
-	subject.login(token);
-	System.out.println("isAuthenticated:"+subject.isAuthenticated());
-	//授权
-	subject.checkRole("admin");
+		// 构建SecurityManager环境
+		DefaultSecurityManager defaultSecurityManager = new DefaultSecurityManager();
+		defaultSecurityManager.setRealm(simpleAccountRealm);
+		// 主体提交认证请求
+		SecurityUtils.setSecurityManager(defaultSecurityManager);
+		org.apache.shiro.subject.Subject subject = SecurityUtils.getSubject();
+		UsernamePasswordToken token = new UsernamePasswordToken("lixin","123456");
+		subject.login(token);
+		System.out.println("isAuthenticated:"+subject.isAuthenticated());
+		// 授权
+		subject.checkRole("admin");
 	
 	}
 }

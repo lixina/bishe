@@ -26,7 +26,7 @@ import org.apache.shiro.util.ByteSource;
 		if(password == null){
 			return null;
 		}
-		//第三个参数是realm，即当前realm的名称
+		// 第三个参数是realm，即当前realm的名称
 		SimpleAuthenticationInfo authenticationInfo = new SimpleAuthenticationInfo
 				(username, password,getName());
 		System.out.println(getName());

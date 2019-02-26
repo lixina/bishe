@@ -116,7 +116,7 @@ $(function(){
 			<h4>使用现有用户</h4><br />
 			<h3><strong>请填写您的用户名及密码</strong></h3><br />
 			<!-- <form action="/login" method="post"> -->
-			<form action="/login" method="post">
+			<form action="/login" method="get">
 			<strong>用户名*</strong><input type="text" name="username" value="${usermsg.username}" style="border:groove;border-color: darkgray;"/><br /><br /><br />
 			&nbsp;&nbsp;&nbsp;&nbsp;<strong>密码*</strong><input type="password" name="userpwd" value="${usermsg.userpwd}" style="border:groove;border-color: darkgray;"/><br /><br /><br />
 			<input type="submit" value="登录" id="loginbtn" style="height: 45px; width: 110px;color:white;background: black;margin-left: 100px;"/>

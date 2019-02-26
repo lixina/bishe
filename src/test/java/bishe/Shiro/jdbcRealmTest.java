@@ -37,6 +37,7 @@ public class jdbcRealmTest {
 		org.apache.shiro.subject.Subject subject = SecurityUtils.getSubject();
 		UsernamePasswordToken token = new UsernamePasswordToken("lixin","123456");
 		subject.login(token);
+		System.out.println(token);
 		System.out.println("isAuthenticated:"+subject.isAuthenticated());
 		
 		//ÊÚÈ¨

@@ -146,10 +146,12 @@ public class UsermsgController {
 	        }
 	}
 	
-	@RequestMapping(value="/login",method = RequestMethod.POST)
+	@RequestMapping(value="/login",method = RequestMethod.GET)
 	public String isuser(HttpServletRequest request){
+	/*public String isuser(String username, String userpwd, HttpServletRequest request){*/
 		String username = request.getParameter("username");
 	    String userpwd = request.getParameter("userpwd");
+	    System.out.println(username);
 	    HttpSession session = request.getSession();
 		session.setAttribute("username", username);
 		session.setAttribute("userpwd", userpwd);
